@@ -53,5 +53,13 @@ public class UserServiceImp  implements UserService ,Serializable{
 		// TODO Auto-generated method stub
 		return userdao.userslist();
 	}
+
+
+
+
+	public List<user> findByUsername(String Username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 		
 }
