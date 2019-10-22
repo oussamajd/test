@@ -1,0 +1,9 @@
+com\hibernate\util\HibernateTemplate.class
+com\hibernate\services\UserService.class
+com\hibernate\entity\user.class
+com\hibernate\controllers\HelloWorld.class
+com\hibernate\servicesImp\UserServiceImp.class
+com\hibernate\util\HibernateUtil.class
+com\hibernate\App.class
+com\hibernate\doaImp\userDaoImp.class
+com\hibernate\dao\UserDao.class
