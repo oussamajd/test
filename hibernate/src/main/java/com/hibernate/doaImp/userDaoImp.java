@@ -3,14 +3,13 @@ package com.hibernate.doaImp;
 import java.util.List;
 
 
-import org.hibernate.SessionFactory;
+
 
 import com.hibernate.util.HibernateTemplate;
 
 
 import com.hibernate.dao.UserDao;
 import com.hibernate.entity.user;
-import com.hibernate.util.*;
 
 
 
@@ -22,7 +21,7 @@ public class userDaoImp implements UserDao {
 		
 	}
 	
-	@Override
+	
 	public user findById(Integer id) {
 		// TODO Auto-generated method stub
 		return (user) this.hibernateTemplate.findById(id, user.class);
