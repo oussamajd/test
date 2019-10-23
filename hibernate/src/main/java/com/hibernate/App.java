@@ -80,6 +80,7 @@ public class App
     	  user user = new user();
     	  user.setNom("malek");
     	  user.setPrenom("wchem");
+    	  userbean.setUser();
       	  userbean.supprimer(user);
     	  
     	  System.out.println("after remove ");

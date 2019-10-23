@@ -13,7 +13,7 @@ import com.hibernate.entity.user;
 import com.hibernate.servicesImp.UserServiceImp;
 
 @ManagedBean(name = "userBean", eager = true)
-@SessionScoped
+
 public class Userbean implements Serializable {
 	/**
 	 * 

@@ -62,6 +62,5 @@ public class userDaoImp implements UserDao {
 		queryString.append(user.getNom()+"'");
 		queryString.append( " and prenom ='"+user.getPrenom()+"'");
 		
-		return  (Integer) this.hibernateTemplate.getSessionFactory().openSession().createQuery(queryString.toString()).list().get(0);
-	}
+		return  (Integer) this.hibernateTemplate.getSessionFactory().openSession().createQuery(queryString.toString()).list().get(0);	}
 }
