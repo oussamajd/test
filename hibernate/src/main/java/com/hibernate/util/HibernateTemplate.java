@@ -81,4 +81,8 @@ public class HibernateTemplate {
 	        Query query = session.createQuery( "from " + clas.getName());       
 	        return query.list();
 	    }
+
+		public SessionFactory getSessionFactory() {
+			return sessionFactory;
+		}
 }

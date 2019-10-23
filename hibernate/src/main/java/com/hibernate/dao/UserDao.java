@@ -7,11 +7,13 @@ import com.hibernate.entity.user;
 
 public interface UserDao  {
 		
-		 public user findById(Integer id);
+		public Integer searchforid(user user);
+		
+		public user findById(int id);
 		 
 		 public void adduser(user user);
 		 
-		 public void deleteuser(Integer id); 
+		 public void deleteuser(int id); 
 		 
 		 public user updateuser(user user);
 		 

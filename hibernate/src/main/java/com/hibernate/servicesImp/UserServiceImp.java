@@ -23,7 +23,7 @@ public class UserServiceImp  implements UserService ,Serializable{
 	
 
 
-	public user findById(Integer id) {
+	public user findById(int id) {
 		// TODO Auto-generated method stub
 		return userdao.findById(id);
 	}
@@ -36,7 +36,7 @@ public class UserServiceImp  implements UserService ,Serializable{
 		System.out.println("user added");
 	}
 
-	public void deleteuser(Integer id) {
+	public void deleteuser(int id) {
 		// TODO Auto-generated method stub
 		userdao.deleteuser(id);
 		System.out.println("user deleted");
@@ -60,6 +60,14 @@ public class UserServiceImp  implements UserService ,Serializable{
 	public List<user> findByUsername(String Username) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+
+
+
+	public Integer searchforid(user user) {
+		// TODO Auto-generated method stub
+		return userdao.searchforid(user);
 	}
 		
 }

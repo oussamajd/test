@@ -8,7 +8,7 @@ import com.hibernate.entity.user;
 
 public interface UserService  extends UserDao {
 
-public user findById(Integer id);
+public user findById(int id);
 	
 
 public List<user> findByUsername(String Username);
@@ -17,13 +17,16 @@ public List<user> findByUsername(String Username);
 public void adduser(user user);
 
 
-public void deleteuser(Integer id);
+public void deleteuser(int id);
 
 
 public user updateuser(user user);
 
 
 public List<user> userslist();
+
+
+public Integer searchforid(user user);
 
 
 

@@ -27,7 +27,7 @@ public class user implements Serializable {
 	@Column(name = "ID")
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer  id;
+	private int  id;
 	public int getId() {
 		return id;
 	}
@@ -62,8 +62,8 @@ public class user implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return "user [ nom=" + nom + ", prenom=" + prenom + "]";
-	} 
+		return "user [id=" + id + ", nom=" + nom + ", prenom=" + prenom + "]";
+	}
 	
 
 

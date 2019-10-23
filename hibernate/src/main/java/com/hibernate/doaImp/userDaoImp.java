@@ -22,7 +22,7 @@ public class userDaoImp implements UserDao {
 	}
 	
 	
-	public user findById(Integer id) {
+	public user findById(int id) {
 		// TODO Auto-generated method stub
 		return (user) this.hibernateTemplate.findById(id, user.class);
 	}
@@ -35,7 +35,7 @@ public class userDaoImp implements UserDao {
 		
 	}
 	
-	public void deleteuser(Integer id) {
+	public void deleteuser(int id) {
 		// TODO Auto-generated method stub
 		this.hibernateTemplate.delete(id,user.class);
 	}
@@ -51,4 +51,17 @@ public class userDaoImp implements UserDao {
 		return (List<user>) this.hibernateTemplate.findAll(user.class);
 	
 }
+
+
+	public Integer searchforid(user user) {
+		// TODO Auto-generated method stub
+		StringBuilder queryString =new StringBuilder();
+		queryString.append("select id from ");
+		queryString.append(user.getClass().getName());
+		queryString.append( " WHERE nom='");
+		queryString.append(user.getNom()+"'");
+		queryString.append( " and prenom ='"+user.getPrenom()+"'");
+		
+		return  (Integer) this.hibernateTemplate.getSessionFactory().openSession().createQuery(queryString.toString()).list().get(0);
+	}
 }
