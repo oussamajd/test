@@ -44,8 +44,8 @@ public class userDaoImp implements UserDao {
 		// TODO Auto-generated method stub
 		return this.updateuser(user);
 	}
+	
 	@SuppressWarnings("unchecked")
-
 	public List<user> userslist() {
 		// TODO Auto-generated method stub
 		return (List<user>) this.hibernateTemplate.findAll(user.class);
@@ -61,6 +61,5 @@ public class userDaoImp implements UserDao {
 		queryString.append( " WHERE nom='");
 		queryString.append(user.getNom()+"'");
 		queryString.append( " and prenom ='"+user.getPrenom()+"'");
-		
 		return  (Integer) this.hibernateTemplate.getSessionFactory().openSession().createQuery(queryString.toString()).list().get(0);	}
 }

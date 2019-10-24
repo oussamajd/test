@@ -1,46 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui">
 
 
 <h:head>
-      <title>JSF tutorial</title>
-   </h:head>
-   
-   <h:body>
-      
-      
-      <h:form title="add">
-      <h2>add user form</h2>
-         prenom<h:inputText id = "inputprenom" value = "#{userBean.prenom}"></h:inputText>
-         <br></br>
-         <br></br>
-         nom<h:inputText id = "inputnom" value = "#{userBean.nom}"></h:inputText>
-          <br></br>
-         <br></br>
-         <h:outputText value="#{userBean.prenom}"></h:outputText>&nbsp;
-         <h:outputText value="#{userBean.nom}"></h:outputText>
-          <br></br>
-         <br></br>
-          <br></br>
-         <br></br>
-         <h:commandButton value = "#{userBean.ajouter()}"></h:commandButton>	
-      </h:form>
-      
-      <!--  <h:form title="remove">
-      <h2>remove user form</h2>
-         prenom<h:inputText id = "inputprenom" value = "#{userBean.prenom}"></h:inputText>
-         <br></br>
-         <br></br>
-         nom<h:inputText id = "inputnom" value = "#{userBean.nom}"></h:inputText>
-          <br></br>
-         <br></br>
-         <h:commandButton value = "#{userBean.supprimer()}"></h:commandButton>	
-      </h:form>
-      -->
-   </h:body>
+<title>bootsfaces test</title>
+</h:head>
+
+
+<h:body>
+
+                    <h1 align="center" style="">jsf test</h1>
+
+<b:form>
+<b:container fluid="true">
+  <b:row>
+    <b:column medium-screen="2">
+      <h:outputText value=""/>
+    </b:column>
+    <b:column medium-screen="4">
+      <b:inputText placeholder="nom"  value = "#{userbean.nom}"/>
+    </b:column>
+    <b:column medium-screen="6">
+      <b:message/>
+    </b:column>
+  </b:row>
+  <b:row>
+    <b:column medium-screen="2">
+      <h:outputText value="" />
+    </b:column>
+    <b:column medium-screen="4">
+      <b:inputText placeholder="prenom" value = "#{userbean.prenom}" />
+    </b:column>
+    <b:column medium-screen="6">
+      <b:message />
+    </b:column>
+  </b:row>
+  <b:row>
+    <b:column span="2" offset="2">
+      <b:commandButton value="ajouter" look="primary" style="width:100%" action="#{userbean.ajouter}"/>
+    </b:column>
+    <b:column span="2">
+      <b:commandButton value="supprimer" look="danger" style="width:100%" action="#{userbean.supprimer}" />
+    </b:column>
+  </b:row>
+</b:container>
+</b:form>
+  
+<b:container>
+            <b:row>
+                <b:column>
+                    <h1>Users list</h1>
+                </b:column>
+            </b:row>
+            <h:form>
+  <b:dataTable value="#{userbean.users}"
+           var="c">
+    <b:dataTableColumn value="#{c.id}" />
+    <b:dataTableColumn value="#{c.nom}" />
+    <b:dataTableColumn value="#{c.prenom}" />
+  </b:dataTable>
+</h:form>
+        </b:container>
+
+
+
+</h:body>
+
+
+
+
+
 </html>

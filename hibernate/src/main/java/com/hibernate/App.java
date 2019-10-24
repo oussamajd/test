@@ -1,49 +1,25 @@
-package com.hibernate;
+/*package com.hibernate;
 
 
 
 import java.util.List;
 
-
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 
 import com.hibernate.entity.user;
-
 import com.hibernate.servicesImp.UserServiceImp;
-
+import com.hibernate.util.HibernateUtil;
 import com.hibernate.controllers.Userbean;
 
-/**
- * Hello world!
- *
- */
+
+ 
 public class App 
 {
     public static void main( String[] args )
     {
-    	/*try {
-    		user user =new  user();
-    		System.out.println("user created");
-    		user.setNom("jedidi");
-    		user.setPrenom("oussema");
-    		
-    		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-    		System.out.println("SessionFactory created ");
-    		
-    		Session session = sessionFactory.openSession();
-    		System.out.println("session opened");
-    		session.beginTransaction();
-    		session.save(user);
-    		System.out.println("inserted successfully");
-    		session.beginTransaction().commit();
-    		session.close();
-    		sessionFactory.close();
-			
-		} catch (Exception e) {
-			System.err.println(e);
-			// TODO: handle exception
-		}
-	*/
-    /*
+    	
+    	
     	UserServiceImp userService = new UserServiceImp();
     	user user = new user();
     	user.setNom("nom");
@@ -56,13 +32,11 @@ public class App
             System.out.println(user1);
             
         }
-        */
-        /*
+      
         user user61 =userService.findById(61);
         System.out.println("After Saving Employee Info : "+user61.toString());
-        */
+        
     	
-    	/* test for userbean */ 
     	
     	Userbean userbean = new Userbean();
     	userbean.setNom("testuserbean");
@@ -72,23 +46,25 @@ public class App
    
     	
     	
-    	  List<user>  users=userbean.getUsers();
-    	  for (user user1 : users) {
+    	  List<user>  users1=userbean.getUsers();
+    	  for (user user1 : users1) {
               System.out.println(user1);
               
           }
-    	  user user = new user();
-    	  user.setNom("malek");
-    	  user.setPrenom("wchem");
-    	  userbean.setUser();
-      	  userbean.supprimer(user);
+    	  user user1 = new user();
+    	  user1.setNom("testuserbean");
+    	  user1.setPrenom("testuserbean");
+    	 
+      	  userbean.supprimer();
     	  
     	  System.out.println("after remove ");
     	  
     	  List<user>  usersafter=userbean.getUsers();
-    	  for (user user1 : usersafter) {
-              System.out.println(user1);
+    	  for (user user11 : usersafter) {
+              System.out.println(user11);
             
           }
    } 
 }
+
+*/
